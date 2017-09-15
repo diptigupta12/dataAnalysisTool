@@ -1,0 +1,5 @@
+2017-09-14 15:57:20,551 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/8deae7e6-dd8e-47b1-b3c4-e9046d02fd0a_resources
+2017-09-14 15:57:20,596 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/8deae7e6-dd8e-47b1-b3c4-e9046d02fd0a
+2017-09-14 15:57:20,604 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/8deae7e6-dd8e-47b1-b3c4-e9046d02fd0a
+2017-09-14 15:57:20,607 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/8deae7e6-dd8e-47b1-b3c4-e9046d02fd0a/_tmp_space.db
+2017-09-14 15:57:20,607 INFO  [main]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.

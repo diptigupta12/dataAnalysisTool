@@ -1,0 +1,38 @@
+2017-09-12 11:53:37,040 WARN  [pool-3-thread-17]: metastore.ObjectStore (ObjectStore.java:getDatabase(621)) - Failed to get database hiveoriginal_sc, returning NoSuchObjectException
+2017-09-12 11:59:04,958 ERROR [pool-3-thread-17]: metastore.RetryingHMSHandler (RetryingHMSHandler.java:invokeInternal(185)) - MetaException(message:java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: hdfs://quickstart.cloudera:8020./hivedatabase/account)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.newMetaException(HiveMetaStore.java:5604)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_with_environment_context(HiveMetaStore.java:1501)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:138)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:99)
+	at com.sun.proxy.$Proxy5.create_table_with_environment_context(Unknown Source)
+	at org.apache.hadoop.hive.metastore.api.ThriftHiveMetastore$Processor$create_table_with_environment_context.getResult(ThriftHiveMetastore.java:9355)
+	at org.apache.hadoop.hive.metastore.api.ThriftHiveMetastore$Processor$create_table_with_environment_context.getResult(ThriftHiveMetastore.java:9339)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.hadoop.hive.metastore.TUGIBasedProcessor$1.run(TUGIBasedProcessor.java:110)
+	at org.apache.hadoop.hive.metastore.TUGIBasedProcessor$1.run(TUGIBasedProcessor.java:106)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hadoop.hive.metastore.TUGIBasedProcessor.process(TUGIBasedProcessor.java:118)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: hdfs://quickstart.cloudera:8020./hivedatabase/account
+	at org.apache.hadoop.fs.Path.initialize(Path.java:206)
+	at org.apache.hadoop.fs.Path.<init>(Path.java:197)
+	at org.apache.hadoop.hive.metastore.Warehouse.getDnsPath(Warehouse.java:145)
+	at org.apache.hadoop.hive.metastore.Warehouse.getDnsPath(Warehouse.java:150)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_core(HiveMetaStore.java:1424)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_with_environment_context(HiveMetaStore.java:1487)
+	... 20 more
+Caused by: java.net.URISyntaxException: Relative path in absolute URI: hdfs://quickstart.cloudera:8020./hivedatabase/account
+	at java.net.URI.checkPath(URI.java:1804)
+	at java.net.URI.<init>(URI.java:752)
+	at org.apache.hadoop.fs.Path.initialize(Path.java:203)
+	... 25 more
+

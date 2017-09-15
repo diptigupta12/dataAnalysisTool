@@ -1,0 +1,56 @@
+2017-08-31 11:59:19,040 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/9ed847fd-d657-46de-b0a1-8dbd67ed96ad_resources
+2017-08-31 11:59:19,071 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/9ed847fd-d657-46de-b0a1-8dbd67ed96ad
+2017-08-31 11:59:19,079 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/9ed847fd-d657-46de-b0a1-8dbd67ed96ad
+2017-08-31 11:59:19,081 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/9ed847fd-d657-46de-b0a1-8dbd67ed96ad/_tmp_space.db
+2017-08-31 11:59:19,082 INFO  [main]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.
+2017-08-31 12:30:21,478 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Invalid SessionHandle: SessionHandle [ab0e4ce4-b1bd-4df7-a662-bded7899b942]
+	at org.apache.hive.service.cli.session.SessionManager.getSession(SessionManager.java:431)
+	at org.apache.hive.service.cli.CLIService.executeStatementAsync(CLIService.java:282)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-08-31 12:30:21,628 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/198c2693-60a1-4cfa-bec6-5705674d813b_resources
+2017-08-31 12:30:21,632 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/cloudera/198c2693-60a1-4cfa-bec6-5705674d813b
+2017-08-31 12:30:21,634 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/198c2693-60a1-4cfa-bec6-5705674d813b
+2017-08-31 12:30:21,638 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/cloudera/198c2693-60a1-4cfa-bec6-5705674d813b/_tmp_space.db
+2017-08-31 12:30:21,638 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.
+2017-08-31 12:30:22,201 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170831123030_61918e18-d072-4225-8a86-1b261adb95ab): SELECT 'Hello World!'
+2017-08-31 12:30:23,064 WARN  [DataStreamer for file /tmp/hive/cloudera/198c2693-60a1-4cfa-bec6-5705674d813b/hive_2017-08-31_12-30-22_205_7743688176804296569-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-08-31 12:30:24,108 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-08-31 12:30:24,112 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-08-31 12:30:24,176 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170831123030_61918e18-d072-4225-8a86-1b261adb95ab); Time taken: 2.052 seconds
+2017-08-31 12:30:24,283 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-08-31 12:30:24,284 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170831123030_61918e18-d072-4225-8a86-1b261adb95ab): SELECT 'Hello World!'
+2017-08-31 12:30:24,294 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170831123030_61918e18-d072-4225-8a86-1b261adb95ab); Time taken: 0.01 seconds
+2017-08-31 12:30:24,294 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-08-31 12:30:54,935 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170831123030_16dbe9a3-d302-4dc9-87d2-bed64bfb8f5d): SELECT 'Hello World!'
+2017-08-31 12:30:55,005 WARN  [DataStreamer for file /tmp/hive/cloudera/198c2693-60a1-4cfa-bec6-5705674d813b/hive_2017-08-31_12-30-54_935_7250239068315751318-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-08-31 12:30:55,073 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-08-31 12:30:55,073 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-08-31 12:30:55,075 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170831123030_16dbe9a3-d302-4dc9-87d2-bed64bfb8f5d); Time taken: 0.14 seconds
+2017-08-31 12:30:55,098 INFO  [HiveServer2-Background-Pool: Thread-42]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-08-31 12:30:55,100 INFO  [HiveServer2-Background-Pool: Thread-42]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170831123030_16dbe9a3-d302-4dc9-87d2-bed64bfb8f5d): SELECT 'Hello World!'
+2017-08-31 12:30:55,100 INFO  [HiveServer2-Background-Pool: Thread-42]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170831123030_16dbe9a3-d302-4dc9-87d2-bed64bfb8f5d); Time taken: 0.0 seconds
+2017-08-31 12:30:55,100 INFO  [HiveServer2-Background-Pool: Thread-42]: ql.Driver (SessionState.java:printInfo(988)) - OK

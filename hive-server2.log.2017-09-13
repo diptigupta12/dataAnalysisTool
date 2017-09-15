@@ -1,0 +1,986 @@
+2017-09-13 08:56:37,001 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/d05174e7-7ae1-4890-b49d-575d1c7ed275_resources
+2017-09-13 08:56:37,031 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/d05174e7-7ae1-4890-b49d-575d1c7ed275
+2017-09-13 08:56:37,038 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/d05174e7-7ae1-4890-b49d-575d1c7ed275
+2017-09-13 08:56:37,045 INFO  [main]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/hive/d05174e7-7ae1-4890-b49d-575d1c7ed275/_tmp_space.db
+2017-09-13 08:56:37,045 INFO  [main]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.
+2017-09-13 09:03:05,781 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Invalid SessionHandle: SessionHandle [198c2693-60a1-4cfa-bec6-5705674d813b]
+	at org.apache.hive.service.cli.session.SessionManager.getSession(SessionManager.java:431)
+	at org.apache.hive.service.cli.CLIService.executeStatementAsync(CLIService.java:282)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+2017-09-13 09:03:05,930 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3_resources
+2017-09-13 09:03:05,935 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3
+2017-09-13 09:03:05,940 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3
+2017-09-13 09:03:05,943 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/_tmp_space.db
+2017-09-13 09:03:05,943 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.
+2017-09-13 09:03:06,469 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_cf3c75f6-32d5-4887-872c-6007cb5748be): SELECT 'Hello World!'
+2017-09-13 09:03:07,192 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_09-03-06_471_8076230112758663153-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 09:03:08,149 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:08,150 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:03:08,185 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_cf3c75f6-32d5-4887-872c-6007cb5748be); Time taken: 1.791 seconds
+2017-09-13 09:03:08,334 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:08,334 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_cf3c75f6-32d5-4887-872c-6007cb5748be): SELECT 'Hello World!'
+2017-09-13 09:03:08,339 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_cf3c75f6-32d5-4887-872c-6007cb5748be); Time taken: 0.005 seconds
+2017-09-13 09:03:08,339 INFO  [HiveServer2-Background-Pool: Thread-38]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:18,361 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_dac2879a-0412-4168-af4d-92a7fd6bb80f): DESCRIBE FORMATTED `default`.`sample_07`
+2017-09-13 09:03:18,409 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:18,439 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:18,445 ERROR [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printError(997)) - FAILED: SemanticException [Error 10001]: Table not found default.sample_07
+org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.sample_07
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-09-13 09:03:18,445 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_dac2879a-0412-4168-af4d-92a7fd6bb80f); Time taken: 0.084 seconds
+2017-09-13 09:03:18,451 WARN  [HiveServer2-Handler-Pool: Thread-30]: security.UserGroupInformation (UserGroupInformation.java:doAs(1799)) - PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.sample_07
+2017-09-13 09:03:18,451 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.sample_07
+	at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:400)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:188)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.sample_07
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	... 27 more
+2017-09-13 09:03:18,456 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_0163a284-93c2-4158-9f19-64d759d581dd): USE `default`
+2017-09-13 09:03:18,470 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:18,470 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:18,471 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_0163a284-93c2-4158-9f19-64d759d581dd); Time taken: 0.015 seconds
+2017-09-13 09:03:18,472 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:18,472 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_0163a284-93c2-4158-9f19-64d759d581dd): USE `default`
+2017-09-13 09:03:18,477 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:18,493 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_0163a284-93c2-4158-9f19-64d759d581dd); Time taken: 0.021 seconds
+2017-09-13 09:03:18,494 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:18,501 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_40ed54cf-45f3-4009-9bb2-b021229eae37): CREATE TABLE `sample_07` (
+  `code` string ,
+  `description` string ,
+  `total_emp` int ,
+  `salary` int )
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '	'
+STORED AS TextFile
+2017-09-13 09:03:18,535 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:18,536 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:18,536 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_40ed54cf-45f3-4009-9bb2-b021229eae37); Time taken: 0.035 seconds
+2017-09-13 09:03:18,554 INFO  [HiveServer2-Background-Pool: Thread-40]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:18,555 INFO  [HiveServer2-Background-Pool: Thread-40]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_40ed54cf-45f3-4009-9bb2-b021229eae37): CREATE TABLE `sample_07` (
+  `code` string ,
+  `description` string ,
+  `total_emp` int ,
+  `salary` int )
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '	'
+STORED AS TextFile
+2017-09-13 09:03:18,558 INFO  [HiveServer2-Background-Pool: Thread-40]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:20,022 INFO  [HiveServer2-Background-Pool: Thread-40]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_40ed54cf-45f3-4009-9bb2-b021229eae37); Time taken: 1.467 seconds
+2017-09-13 09:03:20,023 INFO  [HiveServer2-Background-Pool: Thread-40]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:20,169 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_ce20a5ec-21d1-4a1b-8b22-1700ffb4db64): LOAD DATA INPATH
+      '/user/cloudera/sample_07' OVERWRITE INTO TABLE sample_07
+2017-09-13 09:03:20,277 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:20,278 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:20,278 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_ce20a5ec-21d1-4a1b-8b22-1700ffb4db64); Time taken: 0.109 seconds
+2017-09-13 09:03:20,285 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:20,286 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_ce20a5ec-21d1-4a1b-8b22-1700ffb4db64): LOAD DATA INPATH
+      '/user/cloudera/sample_07' OVERWRITE INTO TABLE sample_07
+2017-09-13 09:03:20,286 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:MOVE] in serial mode
+2017-09-13 09:03:20,287 INFO  [HiveServer2-Background-Pool: Thread-43]: exec.Task (SessionState.java:printInfo(988)) - Loading data to table default.sample_07 from hdfs://quickstart.cloudera:8020/user/cloudera/sample_07
+2017-09-13 09:03:20,534 ERROR [HiveServer2-Background-Pool: Thread-43]: hdfs.KeyProviderCache (KeyProviderCache.java:createKeyProviderURI(87)) - Could not find uri with key [dfs.encryption.key.provider.uri] to create a keyProvider !!
+2017-09-13 09:03:20,683 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-1:STATS] in serial mode
+2017-09-13 09:03:20,789 INFO  [HiveServer2-Background-Pool: Thread-43]: exec.Task (SessionState.java:printInfo(988)) - Table default.sample_07 stats: [numFiles=1, numRows=0, totalSize=46055, rawDataSize=0]
+2017-09-13 09:03:20,789 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_ce20a5ec-21d1-4a1b-8b22-1700ffb4db64); Time taken: 0.503 seconds
+2017-09-13 09:03:20,789 INFO  [HiveServer2-Background-Pool: Thread-43]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:20,814 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_01473bf0-7bb4-4e90-ba26-cfb9fa11f9c3): DESCRIBE FORMATTED `default`.`sample_08`
+2017-09-13 09:03:20,818 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:20,826 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:20,830 ERROR [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printError(997)) - FAILED: SemanticException [Error 10001]: Table not found default.sample_08
+org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.sample_08
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-09-13 09:03:20,830 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_01473bf0-7bb4-4e90-ba26-cfb9fa11f9c3); Time taken: 0.016 seconds
+2017-09-13 09:03:20,833 WARN  [HiveServer2-Handler-Pool: Thread-30]: security.UserGroupInformation (UserGroupInformation.java:doAs(1799)) - PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.sample_08
+2017-09-13 09:03:20,833 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.sample_08
+	at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:400)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:188)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.sample_08
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	... 27 more
+2017-09-13 09:03:20,838 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_9788106e-7565-4ecf-b13a-20d1b1fffc9a): USE `default`
+2017-09-13 09:03:20,842 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:20,842 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:20,843 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_9788106e-7565-4ecf-b13a-20d1b1fffc9a); Time taken: 0.005 seconds
+2017-09-13 09:03:20,844 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:20,844 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_9788106e-7565-4ecf-b13a-20d1b1fffc9a): USE `default`
+2017-09-13 09:03:20,844 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:20,851 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_9788106e-7565-4ecf-b13a-20d1b1fffc9a); Time taken: 0.007 seconds
+2017-09-13 09:03:20,855 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:20,872 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_0fdfc3d7-fdba-48dc-8096-04989880e247): CREATE TABLE `sample_08` (
+  `code` string ,
+  `description` string ,
+  `total_emp` int ,
+  `salary` int )
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '	'
+STORED AS TextFile
+2017-09-13 09:03:20,882 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:20,882 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:20,882 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_0fdfc3d7-fdba-48dc-8096-04989880e247); Time taken: 0.01 seconds
+2017-09-13 09:03:20,886 INFO  [HiveServer2-Background-Pool: Thread-49]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:20,887 INFO  [HiveServer2-Background-Pool: Thread-49]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_0fdfc3d7-fdba-48dc-8096-04989880e247): CREATE TABLE `sample_08` (
+  `code` string ,
+  `description` string ,
+  `total_emp` int ,
+  `salary` int )
+ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '	'
+STORED AS TextFile
+2017-09-13 09:03:20,887 INFO  [HiveServer2-Background-Pool: Thread-49]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:20,932 INFO  [HiveServer2-Background-Pool: Thread-49]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_0fdfc3d7-fdba-48dc-8096-04989880e247); Time taken: 0.045 seconds
+2017-09-13 09:03:20,932 INFO  [HiveServer2-Background-Pool: Thread-49]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,003 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_b0553ed4-cb6d-4c8c-b1db-fc7b7f8dcd6f): LOAD DATA INPATH
+      '/user/cloudera/sample_08' OVERWRITE INTO TABLE sample_08
+2017-09-13 09:03:21,031 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,031 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,031 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_b0553ed4-cb6d-4c8c-b1db-fc7b7f8dcd6f); Time taken: 0.028 seconds
+2017-09-13 09:03:21,040 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,040 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_b0553ed4-cb6d-4c8c-b1db-fc7b7f8dcd6f): LOAD DATA INPATH
+      '/user/cloudera/sample_08' OVERWRITE INTO TABLE sample_08
+2017-09-13 09:03:21,041 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:MOVE] in serial mode
+2017-09-13 09:03:21,041 INFO  [HiveServer2-Background-Pool: Thread-51]: exec.Task (SessionState.java:printInfo(988)) - Loading data to table default.sample_08 from hdfs://quickstart.cloudera:8020/user/cloudera/sample_08
+2017-09-13 09:03:21,145 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-1:STATS] in serial mode
+2017-09-13 09:03:21,227 INFO  [HiveServer2-Background-Pool: Thread-51]: exec.Task (SessionState.java:printInfo(988)) - Table default.sample_08 stats: [numFiles=1, numRows=0, totalSize=46069, rawDataSize=0]
+2017-09-13 09:03:21,227 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_b0553ed4-cb6d-4c8c-b1db-fc7b7f8dcd6f); Time taken: 0.187 seconds
+2017-09-13 09:03:21,227 INFO  [HiveServer2-Background-Pool: Thread-51]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,254 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_9b5aa608-0969-406e-ba73-10389d0b632b): DESCRIBE FORMATTED `default`.`customers`
+2017-09-13 09:03:21,258 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:21,262 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:21,271 ERROR [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printError(997)) - FAILED: SemanticException [Error 10001]: Table not found default.customers
+org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.customers
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-09-13 09:03:21,272 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_9b5aa608-0969-406e-ba73-10389d0b632b); Time taken: 0.018 seconds
+2017-09-13 09:03:21,273 WARN  [HiveServer2-Handler-Pool: Thread-30]: security.UserGroupInformation (UserGroupInformation.java:doAs(1799)) - PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.customers
+2017-09-13 09:03:21,273 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.customers
+	at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:400)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:188)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.customers
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	... 27 more
+2017-09-13 09:03:21,281 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_2ec25cba-26e0-40ef-b069-a33b29894093): USE `default`
+2017-09-13 09:03:21,284 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,284 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,285 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_2ec25cba-26e0-40ef-b069-a33b29894093); Time taken: 0.004 seconds
+2017-09-13 09:03:21,286 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,286 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_2ec25cba-26e0-40ef-b069-a33b29894093): USE `default`
+2017-09-13 09:03:21,286 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:21,292 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_2ec25cba-26e0-40ef-b069-a33b29894093); Time taken: 0.006 seconds
+2017-09-13 09:03:21,292 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,300 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_fc9b66d3-66e1-401c-bfc3-7dcc3d8742e5): CREATE TABLE `customers` (
+ `id` INT,
+ `name` STRING,
+ `email_preferences` STRUCT<`email_format`:STRING, `frequency`:STRING, `categories`:STRUCT<`promos`:BOOLEAN, `surveys`:BOOLEAN>>,
+ `addresses` MAP<STRING, STRUCT<`street_1`:STRING, `street_2`:STRING, `city`:STRING, `state`:STRING, `zip_code`:STRING>>,
+ `orders` ARRAY<STRUCT<`order_id`:STRING, `order_date`:STRING, `items`:ARRAY<STRUCT<`product_id`:INT, `sku`:STRING, `name`:STRING, `price`:DOUBLE, `qty`:INT>>>>)
+STORED AS PARQUET
+2017-09-13 09:03:21,318 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,319 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,319 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_fc9b66d3-66e1-401c-bfc3-7dcc3d8742e5); Time taken: 0.019 seconds
+2017-09-13 09:03:21,323 INFO  [HiveServer2-Background-Pool: Thread-55]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,324 INFO  [HiveServer2-Background-Pool: Thread-55]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_fc9b66d3-66e1-401c-bfc3-7dcc3d8742e5): CREATE TABLE `customers` (
+ `id` INT,
+ `name` STRING,
+ `email_preferences` STRUCT<`email_format`:STRING, `frequency`:STRING, `categories`:STRUCT<`promos`:BOOLEAN, `surveys`:BOOLEAN>>,
+ `addresses` MAP<STRING, STRUCT<`street_1`:STRING, `street_2`:STRING, `city`:STRING, `state`:STRING, `zip_code`:STRING>>,
+ `orders` ARRAY<STRUCT<`order_id`:STRING, `order_date`:STRING, `items`:ARRAY<STRUCT<`product_id`:INT, `sku`:STRING, `name`:STRING, `price`:DOUBLE, `qty`:INT>>>>)
+STORED AS PARQUET
+2017-09-13 09:03:21,324 INFO  [HiveServer2-Background-Pool: Thread-55]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:21,376 INFO  [HiveServer2-Background-Pool: Thread-55]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_fc9b66d3-66e1-401c-bfc3-7dcc3d8742e5); Time taken: 0.052 seconds
+2017-09-13 09:03:21,376 INFO  [HiveServer2-Background-Pool: Thread-55]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,473 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_558371e4-7189-47e0-889d-f70615e7255c): LOAD DATA INPATH
+      '/user/cloudera/customers' OVERWRITE INTO TABLE customers
+2017-09-13 09:03:21,499 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,499 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,499 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_558371e4-7189-47e0-889d-f70615e7255c); Time taken: 0.026 seconds
+2017-09-13 09:03:21,516 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,517 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_558371e4-7189-47e0-889d-f70615e7255c): LOAD DATA INPATH
+      '/user/cloudera/customers' OVERWRITE INTO TABLE customers
+2017-09-13 09:03:21,517 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:MOVE] in serial mode
+2017-09-13 09:03:21,517 INFO  [HiveServer2-Background-Pool: Thread-57]: exec.Task (SessionState.java:printInfo(988)) - Loading data to table default.customers from hdfs://quickstart.cloudera:8020/user/cloudera/customers
+2017-09-13 09:03:21,665 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-1:STATS] in serial mode
+2017-09-13 09:03:21,784 INFO  [HiveServer2-Background-Pool: Thread-57]: exec.Task (SessionState.java:printInfo(988)) - Table default.customers stats: [numFiles=1, numRows=0, totalSize=15812, rawDataSize=0]
+2017-09-13 09:03:21,784 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_558371e4-7189-47e0-889d-f70615e7255c); Time taken: 0.268 seconds
+2017-09-13 09:03:21,784 INFO  [HiveServer2-Background-Pool: Thread-57]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,808 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_4b66aa0e-c0a8-48bb-9c35-77d4634cde3c): DESCRIBE FORMATTED `default`.`web_logs`
+2017-09-13 09:03:21,811 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:21,815 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:21,818 ERROR [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printError(997)) - FAILED: SemanticException [Error 10001]: Table not found default.web_logs
+org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.web_logs
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-09-13 09:03:21,818 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_4b66aa0e-c0a8-48bb-9c35-77d4634cde3c); Time taken: 0.01 seconds
+2017-09-13 09:03:21,822 WARN  [HiveServer2-Handler-Pool: Thread-30]: security.UserGroupInformation (UserGroupInformation.java:doAs(1799)) - PriviledgedActionException as:cloudera (auth:SIMPLE) cause:org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.web_logs
+2017-09-13 09:03:21,822 WARN  [HiveServer2-Handler-Pool: Thread-30]: thrift.ThriftCLIService (ThriftCLIService.java:ExecuteStatement(508)) - Error executing statement: 
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10001]: Table not found default.web_logs
+	at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:400)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:188)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:267)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:337)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:439)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatement(HiveSessionImpl.java:405)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:78)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.access$000(HiveSessionProxy.java:36)
+	at org.apache.hive.service.cli.session.HiveSessionProxy$1.run(HiveSessionProxy.java:63)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1796)
+	at org.apache.hive.service.cli.session.HiveSessionProxy.invoke(HiveSessionProxy.java:59)
+	at com.sun.proxy.$Proxy25.executeStatement(Unknown Source)
+	at org.apache.hive.service.cli.CLIService.executeStatement(CLIService.java:257)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:501)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1313)
+	at org.apache.hive.service.cli.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1298)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.hadoop.hive.ql.parse.SemanticException: Table not found default.web_logs
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1345)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.getTable(BaseSemanticAnalyzer.java:1324)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeDescribeTable(DDLSemanticAnalyzer.java:2027)
+	at org.apache.hadoop.hive.ql.parse.DDLSemanticAnalyzer.analyzeInternal(DDLSemanticAnalyzer.java:317)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:223)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:490)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1276)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1263)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:186)
+	... 27 more
+2017-09-13 09:03:21,827 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_0fe45009-da3b-4a03-a9df-96e077e18981): USE `default`
+2017-09-13 09:03:21,830 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,830 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,831 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_0fe45009-da3b-4a03-a9df-96e077e18981); Time taken: 0.004 seconds
+2017-09-13 09:03:21,832 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,832 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_0fe45009-da3b-4a03-a9df-96e077e18981): USE `default`
+2017-09-13 09:03:21,832 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:21,839 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_0fe45009-da3b-4a03-a9df-96e077e18981); Time taken: 0.007 seconds
+2017-09-13 09:03:21,840 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:21,848 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_d78040a4-b1db-4994-bacc-a4c204beeb85): CREATE TABLE `web_logs`  (  `_version_` bigint,   `app` string,   `bytes` smallint,   `city` string,   `client_ip` string,   `code` tinyint,   `country_code` string,   `country_code3` string,   `country_name` string,   `device_family` string,   `extension` string,   `latitude` float,   `longitude` float,   `method` string,   `os_family` string,   `os_major` string,   `protocol` string,   `record` string,   `referer` string,   `region_code` bigint,   `request` string,   `subapp` string,   `time` string,   `url` string,   `user_agent` string,   `user_agent_family` string,   `user_agent_major` string,   `id` string)
+PARTITIONED BY (  `date` string  )
+ROW FORMAT DELIMITED 
+ FIELDS TERMINATED BY ','
+2017-09-13 09:03:21,859 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:21,859 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:21,859 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_d78040a4-b1db-4994-bacc-a4c204beeb85); Time taken: 0.011 seconds
+2017-09-13 09:03:21,863 INFO  [HiveServer2-Background-Pool: Thread-61]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:21,864 INFO  [HiveServer2-Background-Pool: Thread-61]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_d78040a4-b1db-4994-bacc-a4c204beeb85): CREATE TABLE `web_logs`  (  `_version_` bigint,   `app` string,   `bytes` smallint,   `city` string,   `client_ip` string,   `code` tinyint,   `country_code` string,   `country_code3` string,   `country_name` string,   `device_family` string,   `extension` string,   `latitude` float,   `longitude` float,   `method` string,   `os_family` string,   `os_major` string,   `protocol` string,   `record` string,   `referer` string,   `region_code` bigint,   `request` string,   `subapp` string,   `time` string,   `url` string,   `user_agent` string,   `user_agent_family` string,   `user_agent_major` string,   `id` string)
+PARTITIONED BY (  `date` string  )
+ROW FORMAT DELIMITED 
+ FIELDS TERMINATED BY ','
+2017-09-13 09:03:21,865 INFO  [HiveServer2-Background-Pool: Thread-61]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:21,923 INFO  [HiveServer2-Background-Pool: Thread-61]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_d78040a4-b1db-4994-bacc-a4c204beeb85); Time taken: 0.059 seconds
+2017-09-13 09:03:21,923 INFO  [HiveServer2-Background-Pool: Thread-61]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:22,032 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_81d943b3-e430-4551-9d30-b6c4a45939ac): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-18') LOCATION '/user/cloudera/2015_11_18'
+2017-09-13 09:03:22,080 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:22,081 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:22,081 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_81d943b3-e430-4551-9d30-b6c4a45939ac); Time taken: 0.049 seconds
+2017-09-13 09:03:22,087 INFO  [HiveServer2-Background-Pool: Thread-63]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:22,088 INFO  [HiveServer2-Background-Pool: Thread-63]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_81d943b3-e430-4551-9d30-b6c4a45939ac): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-18') LOCATION '/user/cloudera/2015_11_18'
+2017-09-13 09:03:22,089 INFO  [HiveServer2-Background-Pool: Thread-63]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:22,249 INFO  [HiveServer2-Background-Pool: Thread-63]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_81d943b3-e430-4551-9d30-b6c4a45939ac); Time taken: 0.161 seconds
+2017-09-13 09:03:22,249 INFO  [HiveServer2-Background-Pool: Thread-63]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:22,339 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_abb60d68-6dc2-43d5-9020-637324bc5a4f): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-20') LOCATION '/user/cloudera/2015_11_20'
+2017-09-13 09:03:22,365 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:22,366 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:22,366 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_abb60d68-6dc2-43d5-9020-637324bc5a4f); Time taken: 0.027 seconds
+2017-09-13 09:03:22,372 INFO  [HiveServer2-Background-Pool: Thread-65]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:22,374 INFO  [HiveServer2-Background-Pool: Thread-65]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_abb60d68-6dc2-43d5-9020-637324bc5a4f): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-20') LOCATION '/user/cloudera/2015_11_20'
+2017-09-13 09:03:22,381 INFO  [HiveServer2-Background-Pool: Thread-65]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:22,506 INFO  [HiveServer2-Background-Pool: Thread-65]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_abb60d68-6dc2-43d5-9020-637324bc5a4f); Time taken: 0.132 seconds
+2017-09-13 09:03:22,507 INFO  [HiveServer2-Background-Pool: Thread-65]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:22,595 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_5667347a-68e2-442d-bc23-06f3ca55b86a): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-21') LOCATION '/user/cloudera/2015_11_21'
+2017-09-13 09:03:22,617 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:22,617 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:22,618 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_5667347a-68e2-442d-bc23-06f3ca55b86a); Time taken: 0.022 seconds
+2017-09-13 09:03:22,622 INFO  [HiveServer2-Background-Pool: Thread-67]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:22,623 INFO  [HiveServer2-Background-Pool: Thread-67]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_5667347a-68e2-442d-bc23-06f3ca55b86a): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-21') LOCATION '/user/cloudera/2015_11_21'
+2017-09-13 09:03:22,624 INFO  [HiveServer2-Background-Pool: Thread-67]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:22,687 INFO  [HiveServer2-Background-Pool: Thread-67]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_5667347a-68e2-442d-bc23-06f3ca55b86a); Time taken: 0.064 seconds
+2017-09-13 09:03:22,687 INFO  [HiveServer2-Background-Pool: Thread-67]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:22,768 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_66b50186-b442-4839-90ad-5f9f7779d6f4): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-19') LOCATION '/user/cloudera/2015_11_19'
+2017-09-13 09:03:22,805 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:22,805 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 09:03:22,805 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_66b50186-b442-4839-90ad-5f9f7779d6f4); Time taken: 0.037 seconds
+2017-09-13 09:03:22,813 INFO  [HiveServer2-Background-Pool: Thread-69]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:22,813 INFO  [HiveServer2-Background-Pool: Thread-69]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_66b50186-b442-4839-90ad-5f9f7779d6f4): ALTER TABLE web_logs ADD PARTITION(`date`='2015-11-19') LOCATION '/user/cloudera/2015_11_19'
+2017-09-13 09:03:22,814 INFO  [HiveServer2-Background-Pool: Thread-69]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:22,882 INFO  [HiveServer2-Background-Pool: Thread-69]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_66b50186-b442-4839-90ad-5f9f7779d6f4); Time taken: 0.069 seconds
+2017-09-13 09:03:22,882 INFO  [HiveServer2-Background-Pool: Thread-69]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:36,916 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_771c8c1c-e088-40d6-97fa-29a35e6d6f1a): DESCRIBE FORMATTED `default`.`customers`
+2017-09-13 09:03:36,920 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:36,925 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:36,960 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:36,961 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:03:36,964 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_771c8c1c-e088-40d6-97fa-29a35e6d6f1a); Time taken: 0.047 seconds
+2017-09-13 09:03:36,970 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:36,970 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_771c8c1c-e088-40d6-97fa-29a35e6d6f1a): DESCRIBE FORMATTED `default`.`customers`
+2017-09-13 09:03:36,971 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:37,009 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_771c8c1c-e088-40d6-97fa-29a35e6d6f1a); Time taken: 0.039 seconds
+2017-09-13 09:03:37,011 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:37,088 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:03:41,556 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_47a4a030-e5bb-4ff7-b23a-dd450f249cb8): DESCRIBE FORMATTED `default`.`emp`
+2017-09-13 09:03:41,559 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:41,564 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:41,588 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:41,592 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:03:41,595 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_47a4a030-e5bb-4ff7-b23a-dd450f249cb8); Time taken: 0.039 seconds
+2017-09-13 09:03:41,602 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:41,602 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_47a4a030-e5bb-4ff7-b23a-dd450f249cb8): DESCRIBE FORMATTED `default`.`emp`
+2017-09-13 09:03:41,603 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:41,627 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_47a4a030-e5bb-4ff7-b23a-dd450f249cb8); Time taken: 0.025 seconds
+2017-09-13 09:03:41,627 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:41,634 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:03:42,806 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_b7f1b7ba-41fe-41d4-89eb-9cc79a19dc59): DESCRIBE FORMATTED `default`.`empinfo1`
+2017-09-13 09:03:42,812 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:42,820 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:42,859 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:42,860 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:03:42,863 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_b7f1b7ba-41fe-41d4-89eb-9cc79a19dc59); Time taken: 0.057 seconds
+2017-09-13 09:03:42,870 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:42,870 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_b7f1b7ba-41fe-41d4-89eb-9cc79a19dc59): DESCRIBE FORMATTED `default`.`empinfo1`
+2017-09-13 09:03:42,870 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:42,896 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_b7f1b7ba-41fe-41d4-89eb-9cc79a19dc59); Time taken: 0.026 seconds
+2017-09-13 09:03:42,897 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:42,911 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:03:58,161 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090303_67f76724-47e2-4b4a-8ca0-83c54e099078): DESCRIBE FORMATTED `default`.`web_logs`
+2017-09-13 09:03:58,174 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:58,180 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:03:58,212 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:03:58,213 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:03:58,217 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090303_67f76724-47e2-4b4a-8ca0-83c54e099078); Time taken: 0.056 seconds
+2017-09-13 09:03:58,228 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:03:58,228 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090303_67f76724-47e2-4b4a-8ca0-83c54e099078): DESCRIBE FORMATTED `default`.`web_logs`
+2017-09-13 09:03:58,229 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:03:58,281 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090303_67f76724-47e2-4b4a-8ca0-83c54e099078); Time taken: 0.053 seconds
+2017-09-13 09:03:58,286 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:03:58,294 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:04:01,156 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090404_ce037a5d-0b65-4ca7-a5de-b7ad50a19dea): DESCRIBE FORMATTED `default`.`sample_07`
+2017-09-13 09:04:01,165 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:04:01,171 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:04:01,187 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:04:01,187 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:04:01,188 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090404_ce037a5d-0b65-4ca7-a5de-b7ad50a19dea); Time taken: 0.032 seconds
+2017-09-13 09:04:01,191 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:04:01,191 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090404_ce037a5d-0b65-4ca7-a5de-b7ad50a19dea): DESCRIBE FORMATTED `default`.`sample_07`
+2017-09-13 09:04:01,192 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:04:01,219 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090404_ce037a5d-0b65-4ca7-a5de-b7ad50a19dea); Time taken: 0.028 seconds
+2017-09-13 09:04:01,219 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:04:01,226 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:04:03,919 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090404_231a223f-ecf9-4e2c-a01d-95c1a124d35e): DESCRIBE FORMATTED `default`.`sample_08`
+2017-09-13 09:04:03,931 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:04:03,937 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-13 09:04:03,955 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:04:03,955 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:04:03,956 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090404_231a223f-ecf9-4e2c-a01d-95c1a124d35e); Time taken: 0.037 seconds
+2017-09-13 09:04:03,959 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:04:03,959 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090404_231a223f-ecf9-4e2c-a01d-95c1a124d35e): DESCRIBE FORMATTED `default`.`sample_08`
+2017-09-13 09:04:03,960 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:04:03,979 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090404_231a223f-ecf9-4e2c-a01d-95c1a124d35e); Time taken: 0.02 seconds
+2017-09-13 09:04:03,979 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:04:03,988 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 09:04:58,330 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090404_82d296c3-e33c-45fe-bc3c-c7b45876de7d): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 09:04:58,333 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:04:58,334 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:db_name, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer), FieldSchema(name:location, type:string, comment:from deserializer), FieldSchema(name:owner_name, type:string, comment:from deserializer), FieldSchema(name:owner_type, type:string, comment:from deserializer), FieldSchema(name:parameters, type:string, comment:from deserializer)], properties:null)
+2017-09-13 09:04:58,335 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090404_82d296c3-e33c-45fe-bc3c-c7b45876de7d); Time taken: 0.005 seconds
+2017-09-13 09:04:58,345 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:04:58,345 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090404_82d296c3-e33c-45fe-bc3c-c7b45876de7d): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 09:04:58,345 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 09:04:58,352 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090404_82d296c3-e33c-45fe-bc3c-c7b45876de7d); Time taken: 0.007 seconds
+2017-09-13 09:04:58,352 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:06:06,727 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090606_db297736-d8b0-4dba-879f-0dce6a46d21b): SELECT 'Hello World!'
+2017-09-13 09:06:06,771 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_09-06-06_727_3087443270685432582-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 09:06:06,801 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:06:06,801 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:06:06,802 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090606_db297736-d8b0-4dba-879f-0dce6a46d21b); Time taken: 0.075 seconds
+2017-09-13 09:06:06,814 INFO  [HiveServer2-Background-Pool: Thread-84]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:06:06,815 INFO  [HiveServer2-Background-Pool: Thread-84]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090606_db297736-d8b0-4dba-879f-0dce6a46d21b): SELECT 'Hello World!'
+2017-09-13 09:06:06,815 INFO  [HiveServer2-Background-Pool: Thread-84]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090606_db297736-d8b0-4dba-879f-0dce6a46d21b); Time taken: 0.0 seconds
+2017-09-13 09:06:06,815 INFO  [HiveServer2-Background-Pool: Thread-84]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:07:43,666 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090707_d0f78beb-0cd9-4773-baf3-12b48dca78d2): SELECT 'Hello World!'
+2017-09-13 09:07:43,755 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:07:43,755 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:07:43,756 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090707_d0f78beb-0cd9-4773-baf3-12b48dca78d2); Time taken: 0.09 seconds
+2017-09-13 09:07:43,779 INFO  [HiveServer2-Background-Pool: Thread-91]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:07:43,779 INFO  [HiveServer2-Background-Pool: Thread-91]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090707_d0f78beb-0cd9-4773-baf3-12b48dca78d2): SELECT 'Hello World!'
+2017-09-13 09:07:43,780 INFO  [HiveServer2-Background-Pool: Thread-91]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090707_d0f78beb-0cd9-4773-baf3-12b48dca78d2); Time taken: 0.001 seconds
+2017-09-13 09:07:43,780 INFO  [HiveServer2-Background-Pool: Thread-91]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:09:37,139 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913090909_6d3a3dd6-c3b1-4b30-b334-8ec9df05af1c): SELECT 'Hello World!'
+2017-09-13 09:09:37,203 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:09:37,203 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:09:37,204 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913090909_6d3a3dd6-c3b1-4b30-b334-8ec9df05af1c); Time taken: 0.065 seconds
+2017-09-13 09:09:37,224 INFO  [HiveServer2-Background-Pool: Thread-99]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:09:37,228 INFO  [HiveServer2-Background-Pool: Thread-99]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913090909_6d3a3dd6-c3b1-4b30-b334-8ec9df05af1c): SELECT 'Hello World!'
+2017-09-13 09:09:37,229 INFO  [HiveServer2-Background-Pool: Thread-99]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913090909_6d3a3dd6-c3b1-4b30-b334-8ec9df05af1c); Time taken: 0.001 seconds
+2017-09-13 09:09:37,229 INFO  [HiveServer2-Background-Pool: Thread-99]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:12:45,988 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913091212_6893616f-c166-47a8-b413-4421f6022cff): SELECT 'Hello World!'
+2017-09-13 09:12:46,055 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:12:46,055 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:12:46,056 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913091212_6893616f-c166-47a8-b413-4421f6022cff); Time taken: 0.068 seconds
+2017-09-13 09:12:46,074 INFO  [HiveServer2-Background-Pool: Thread-106]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:12:46,075 INFO  [HiveServer2-Background-Pool: Thread-106]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913091212_6893616f-c166-47a8-b413-4421f6022cff): SELECT 'Hello World!'
+2017-09-13 09:12:46,075 INFO  [HiveServer2-Background-Pool: Thread-106]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913091212_6893616f-c166-47a8-b413-4421f6022cff); Time taken: 0.0 seconds
+2017-09-13 09:12:46,075 INFO  [HiveServer2-Background-Pool: Thread-106]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:13:28,247 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913091313_23f322ae-da7d-484b-9ca7-0bed674d22c6): SELECT 'Hello World!'
+2017-09-13 09:13:28,334 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:13:28,334 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:13:28,340 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913091313_23f322ae-da7d-484b-9ca7-0bed674d22c6); Time taken: 0.093 seconds
+2017-09-13 09:13:28,374 INFO  [HiveServer2-Background-Pool: Thread-110]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:13:28,375 INFO  [HiveServer2-Background-Pool: Thread-110]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913091313_23f322ae-da7d-484b-9ca7-0bed674d22c6): SELECT 'Hello World!'
+2017-09-13 09:13:28,375 INFO  [HiveServer2-Background-Pool: Thread-110]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913091313_23f322ae-da7d-484b-9ca7-0bed674d22c6); Time taken: 0.0 seconds
+2017-09-13 09:13:28,375 INFO  [HiveServer2-Background-Pool: Thread-110]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:18:29,914 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913091818_9ca93649-77c2-47ae-8eff-b74eb61331b2): SELECT 'Hello World!'
+2017-09-13 09:18:29,949 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_09-18-29_915_6830621045474293064-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 09:18:29,976 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:18:29,976 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:18:29,977 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913091818_9ca93649-77c2-47ae-8eff-b74eb61331b2); Time taken: 0.063 seconds
+2017-09-13 09:18:29,996 INFO  [HiveServer2-Background-Pool: Thread-117]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:18:29,997 INFO  [HiveServer2-Background-Pool: Thread-117]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913091818_9ca93649-77c2-47ae-8eff-b74eb61331b2): SELECT 'Hello World!'
+2017-09-13 09:18:29,997 INFO  [HiveServer2-Background-Pool: Thread-117]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913091818_9ca93649-77c2-47ae-8eff-b74eb61331b2); Time taken: 0.0 seconds
+2017-09-13 09:18:29,998 INFO  [HiveServer2-Background-Pool: Thread-117]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:19:46,418 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913091919_35ba41e0-fdfa-4f4a-9a55-859f23e96fa2): SELECT 'Hello World!'
+2017-09-13 09:19:46,563 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:19:46,564 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:19:46,572 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913091919_35ba41e0-fdfa-4f4a-9a55-859f23e96fa2); Time taken: 0.154 seconds
+2017-09-13 09:19:46,602 INFO  [HiveServer2-Background-Pool: Thread-123]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:19:46,603 INFO  [HiveServer2-Background-Pool: Thread-123]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913091919_35ba41e0-fdfa-4f4a-9a55-859f23e96fa2): SELECT 'Hello World!'
+2017-09-13 09:19:46,603 INFO  [HiveServer2-Background-Pool: Thread-123]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913091919_35ba41e0-fdfa-4f4a-9a55-859f23e96fa2); Time taken: 0.0 seconds
+2017-09-13 09:19:46,603 INFO  [HiveServer2-Background-Pool: Thread-123]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:20:43,444 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913092020_5375b2bb-8bd3-4a28-8ae2-fc1f861e29ab): SELECT 'Hello World!'
+2017-09-13 09:20:43,486 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_09-20-43_444_2529344655000841783-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 09:20:43,516 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:20:43,516 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:20:43,517 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913092020_5375b2bb-8bd3-4a28-8ae2-fc1f861e29ab); Time taken: 0.073 seconds
+2017-09-13 09:20:43,539 INFO  [HiveServer2-Background-Pool: Thread-127]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:20:43,540 INFO  [HiveServer2-Background-Pool: Thread-127]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913092020_5375b2bb-8bd3-4a28-8ae2-fc1f861e29ab): SELECT 'Hello World!'
+2017-09-13 09:20:43,540 INFO  [HiveServer2-Background-Pool: Thread-127]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913092020_5375b2bb-8bd3-4a28-8ae2-fc1f861e29ab); Time taken: 0.0 seconds
+2017-09-13 09:20:43,540 INFO  [HiveServer2-Background-Pool: Thread-127]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:26:11,299 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/Dipti
+2017-09-13 09:26:11,300 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/120c5819-bb1f-4d75-9d57-62470ac273eb_resources
+2017-09-13 09:26:11,307 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/Dipti/120c5819-bb1f-4d75-9d57-62470ac273eb
+2017-09-13 09:26:11,309 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created local directory: /tmp/hive/120c5819-bb1f-4d75-9d57-62470ac273eb
+2017-09-13 09:26:11,313 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:createPath(681)) - Created HDFS directory: /tmp/hive/Dipti/120c5819-bb1f-4d75-9d57-62470ac273eb/_tmp_space.db
+2017-09-13 09:26:11,313 INFO  [HiveServer2-Handler-Pool: Thread-30]: session.SessionState (SessionState.java:start(572)) - No Tez session required at this point. hive.execution.engine=mr.
+2017-09-13 09:26:11,415 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913092626_bfe7f015-e198-478e-ac15-746a766e0d5c): SELECT 'Hello World!'
+2017-09-13 09:26:11,502 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:26:11,503 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:26:11,507 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913092626_bfe7f015-e198-478e-ac15-746a766e0d5c); Time taken: 0.092 seconds
+2017-09-13 09:26:11,535 INFO  [HiveServer2-Background-Pool: Thread-134]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:26:11,536 INFO  [HiveServer2-Background-Pool: Thread-134]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913092626_bfe7f015-e198-478e-ac15-746a766e0d5c): SELECT 'Hello World!'
+2017-09-13 09:26:11,536 INFO  [HiveServer2-Background-Pool: Thread-134]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913092626_bfe7f015-e198-478e-ac15-746a766e0d5c); Time taken: 0.0 seconds
+2017-09-13 09:26:11,536 INFO  [HiveServer2-Background-Pool: Thread-134]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:28:03,412 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913092828_ecec16d7-66ce-4fd1-9af5-62c6b3b2275d): SELECT 'Hello World!'
+2017-09-13 09:28:03,462 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:28:03,463 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:28:03,467 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913092828_ecec16d7-66ce-4fd1-9af5-62c6b3b2275d); Time taken: 0.055 seconds
+2017-09-13 09:28:03,481 INFO  [HiveServer2-Background-Pool: Thread-141]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:28:03,482 INFO  [HiveServer2-Background-Pool: Thread-141]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913092828_ecec16d7-66ce-4fd1-9af5-62c6b3b2275d): SELECT 'Hello World!'
+2017-09-13 09:28:03,482 INFO  [HiveServer2-Background-Pool: Thread-141]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913092828_ecec16d7-66ce-4fd1-9af5-62c6b3b2275d); Time taken: 0.0 seconds
+2017-09-13 09:28:03,482 INFO  [HiveServer2-Background-Pool: Thread-141]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 09:28:09,297 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913092828_a5fdb828-7c7a-45d1-9757-4ce930fd5a39): SELECT 'Hello World!'
+2017-09-13 09:28:09,327 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_09-28-09_298_6745299541182097669-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 09:28:09,362 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 09:28:09,362 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 09:28:09,363 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913092828_a5fdb828-7c7a-45d1-9757-4ce930fd5a39); Time taken: 0.067 seconds
+2017-09-13 09:28:09,384 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 09:28:09,387 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913092828_a5fdb828-7c7a-45d1-9757-4ce930fd5a39): SELECT 'Hello World!'
+2017-09-13 09:28:09,387 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913092828_a5fdb828-7c7a-45d1-9757-4ce930fd5a39); Time taken: 0.0 seconds
+2017-09-13 09:28:09,387 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:47:26,945 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913114747_b95426b9-cbc9-4c36-8572-8f198b4abbe5): SELECT 'Hello World!'
+2017-09-13 11:47:27,050 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:47:27,050 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 11:47:27,051 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913114747_b95426b9-cbc9-4c36-8572-8f198b4abbe5); Time taken: 0.105 seconds
+2017-09-13 11:47:27,067 INFO  [HiveServer2-Background-Pool: Thread-151]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:47:27,068 INFO  [HiveServer2-Background-Pool: Thread-151]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913114747_b95426b9-cbc9-4c36-8572-8f198b4abbe5): SELECT 'Hello World!'
+2017-09-13 11:47:27,068 INFO  [HiveServer2-Background-Pool: Thread-151]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913114747_b95426b9-cbc9-4c36-8572-8f198b4abbe5); Time taken: 0.0 seconds
+2017-09-13 11:47:27,069 INFO  [HiveServer2-Background-Pool: Thread-151]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:48:29,890 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913114848_14a95be9-5dcd-482c-8cc7-058010c44c9a): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 11:48:29,892 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:48:29,892 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:db_name, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer), FieldSchema(name:location, type:string, comment:from deserializer), FieldSchema(name:owner_name, type:string, comment:from deserializer), FieldSchema(name:owner_type, type:string, comment:from deserializer), FieldSchema(name:parameters, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:48:29,893 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913114848_14a95be9-5dcd-482c-8cc7-058010c44c9a); Time taken: 0.003 seconds
+2017-09-13 11:48:29,901 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:48:29,910 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913114848_14a95be9-5dcd-482c-8cc7-058010c44c9a): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 11:48:29,911 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:48:29,964 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913114848_14a95be9-5dcd-482c-8cc7-058010c44c9a); Time taken: 0.054 seconds
+2017-09-13 11:48:29,965 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:29,149 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_96f8c52f-5755-44cf-bf2d-0207bf51403e): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:29,156 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:29,162 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:29,182 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:29,182 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:51:29,183 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_96f8c52f-5755-44cf-bf2d-0207bf51403e); Time taken: 0.034 seconds
+2017-09-13 11:51:29,185 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:29,186 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_96f8c52f-5755-44cf-bf2d-0207bf51403e): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:29,186 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:51:29,209 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_96f8c52f-5755-44cf-bf2d-0207bf51403e); Time taken: 0.023 seconds
+2017-09-13 11:51:29,209 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:29,215 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 11:51:30,828 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_202e38b0-9a53-4f50-8a0e-3115f386054f): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_contact`
+2017-09-13 11:51:30,831 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:30,836 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:30,873 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:30,874 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:51:30,875 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_202e38b0-9a53-4f50-8a0e-3115f386054f); Time taken: 0.046 seconds
+2017-09-13 11:51:30,884 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:30,884 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_202e38b0-9a53-4f50-8a0e-3115f386054f): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_contact`
+2017-09-13 11:51:30,885 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:51:30,915 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_202e38b0-9a53-4f50-8a0e-3115f386054f); Time taken: 0.03 seconds
+2017-09-13 11:51:30,915 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:30,923 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 11:51:48,582 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_c178d87c-ea21-4555-b511-948d5486f6ec): DESCRIBE DATABASE EXTENDED `hiveoriginal_sc`
+2017-09-13 11:51:48,584 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:48,584 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:db_name, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer), FieldSchema(name:location, type:string, comment:from deserializer), FieldSchema(name:owner_name, type:string, comment:from deserializer), FieldSchema(name:owner_type, type:string, comment:from deserializer), FieldSchema(name:parameters, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:51:48,585 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_c178d87c-ea21-4555-b511-948d5486f6ec); Time taken: 0.003 seconds
+2017-09-13 11:51:48,587 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:48,587 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_c178d87c-ea21-4555-b511-948d5486f6ec): DESCRIBE DATABASE EXTENDED `hiveoriginal_sc`
+2017-09-13 11:51:48,595 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:51:48,598 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_c178d87c-ea21-4555-b511-948d5486f6ec); Time taken: 0.011 seconds
+2017-09-13 11:51:48,599 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:52,501 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_02fc9e42-b56e-4c47-a833-7b77b782d031): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:52,504 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:52,507 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:52,532 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:52,532 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:51:52,533 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_02fc9e42-b56e-4c47-a833-7b77b782d031); Time taken: 0.032 seconds
+2017-09-13 11:51:52,544 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:52,545 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_02fc9e42-b56e-4c47-a833-7b77b782d031): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:52,545 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:51:52,586 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_02fc9e42-b56e-4c47-a833-7b77b782d031); Time taken: 0.041 seconds
+2017-09-13 11:51:52,586 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:52,610 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 11:51:52,821 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_5de95816-356a-4fde-bf88-d1a66b08945f): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:52,824 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:52,829 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table hiveoriginal_sc not found: default.hiveoriginal_sc table not found
+2017-09-13 11:51:52,857 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:52,858 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:51:52,858 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_5de95816-356a-4fde-bf88-d1a66b08945f); Time taken: 0.037 seconds
+2017-09-13 11:51:52,862 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:52,863 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_5de95816-356a-4fde-bf88-d1a66b08945f): DESCRIBE FORMATTED `hiveoriginal_sc`.`hive_account`
+2017-09-13 11:51:52,863 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:51:52,890 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_5de95816-356a-4fde-bf88-d1a66b08945f); Time taken: 0.027 seconds
+2017-09-13 11:51:52,890 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:51:52,899 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-13 11:51:52,914 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115151_07d95a40-22b0-4a80-8342-9412a60a8276): SELECT * FROM `hiveoriginal_sc`.`hive_account` LIMIT 100
+2017-09-13 11:51:52,979 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:51:52,979 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:hive_account.account_id, type:int, comment:null), FieldSchema(name:hive_account.account_name, type:string, comment:null), FieldSchema(name:hive_account.account_phone, type:string, comment:null)], properties:null)
+2017-09-13 11:51:52,981 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115151_07d95a40-22b0-4a80-8342-9412a60a8276); Time taken: 0.066 seconds
+2017-09-13 11:51:52,987 INFO  [HiveServer2-Background-Pool: Thread-161]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:51:52,987 INFO  [HiveServer2-Background-Pool: Thread-161]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115151_07d95a40-22b0-4a80-8342-9412a60a8276): SELECT * FROM `hiveoriginal_sc`.`hive_account` LIMIT 100
+2017-09-13 11:51:52,987 INFO  [HiveServer2-Background-Pool: Thread-161]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115151_07d95a40-22b0-4a80-8342-9412a60a8276); Time taken: 0.0 seconds
+2017-09-13 11:51:52,987 INFO  [HiveServer2-Background-Pool: Thread-161]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:57:05,910 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115757_13226368-b237-44a5-9f40-bd83afd53784): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 11:57:05,918 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:57:05,918 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:db_name, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer), FieldSchema(name:location, type:string, comment:from deserializer), FieldSchema(name:owner_name, type:string, comment:from deserializer), FieldSchema(name:owner_type, type:string, comment:from deserializer), FieldSchema(name:parameters, type:string, comment:from deserializer)], properties:null)
+2017-09-13 11:57:05,933 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115757_13226368-b237-44a5-9f40-bd83afd53784); Time taken: 0.023 seconds
+2017-09-13 11:57:05,935 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:57:05,936 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115757_13226368-b237-44a5-9f40-bd83afd53784): DESCRIBE DATABASE EXTENDED `default`
+2017-09-13 11:57:05,937 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:57:05,941 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115757_13226368-b237-44a5-9f40-bd83afd53784); Time taken: 0.005 seconds
+2017-09-13 11:57:05,948 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:57:41,565 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115757_034212a6-cccb-438d-8c42-f64f9eda6510): SELECT 'Hello World!'
+2017-09-13 11:57:41,589 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_11-57-41_565_2561253625871966427-1/dummy_path/dummy_file]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:57:41,614 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:57:41,614 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-13 11:57:41,617 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115757_034212a6-cccb-438d-8c42-f64f9eda6510); Time taken: 0.052 seconds
+2017-09-13 11:57:41,632 INFO  [HiveServer2-Background-Pool: Thread-169]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:57:41,634 INFO  [HiveServer2-Background-Pool: Thread-169]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115757_034212a6-cccb-438d-8c42-f64f9eda6510): SELECT 'Hello World!'
+2017-09-13 11:57:41,635 INFO  [HiveServer2-Background-Pool: Thread-169]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115757_034212a6-cccb-438d-8c42-f64f9eda6510); Time taken: 0.001 seconds
+2017-09-13 11:57:41,635 INFO  [HiveServer2-Background-Pool: Thread-169]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:58:56,386 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115858_d7417c9d-9fd0-40fa-a605-067b132345e9): USE `hiveoriginal_sc`
+2017-09-13 11:58:56,390 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:58:56,390 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:null, properties:null)
+2017-09-13 11:58:56,394 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115858_d7417c9d-9fd0-40fa-a605-067b132345e9); Time taken: 0.004 seconds
+2017-09-13 11:58:56,394 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:58:56,395 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115858_d7417c9d-9fd0-40fa-a605-067b132345e9): USE `hiveoriginal_sc`
+2017-09-13 11:58:56,395 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 11:58:56,407 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115858_d7417c9d-9fd0-40fa-a605-067b132345e9); Time taken: 0.012 seconds
+2017-09-13 11:58:56,408 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 11:58:56,420 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913115858_7613877a-0311-4559-820c-ad97dfec23b8): Select count(*) FROM hive_account
+2017-09-13 11:58:56,608 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 11:58:56,608 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:bigint, comment:null)], properties:null)
+2017-09-13 11:58:56,610 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913115858_7613877a-0311-4559-820c-ad97dfec23b8); Time taken: 0.19 seconds
+2017-09-13 11:58:56,625 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 11:58:56,626 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913115858_7613877a-0311-4559-820c-ad97dfec23b8): Select count(*) FROM hive_account
+2017-09-13 11:58:56,626 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - Query ID = hive_20170913115858_7613877a-0311-4559-820c-ad97dfec23b8
+2017-09-13 11:58:56,627 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - Total jobs = 1
+2017-09-13 11:58:56,697 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - Launching Job 1 out of 1
+2017-09-13 11:58:56,702 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-1:MAPRED] in serial mode
+2017-09-13 11:58:56,702 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - Number of reduce tasks determined at compile time: 1
+2017-09-13 11:58:56,703 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - In order to change the average load for a reducer (in bytes):
+2017-09-13 11:58:56,703 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) -   set hive.exec.reducers.bytes.per.reducer=<number>
+2017-09-13 11:58:56,704 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - In order to limit the maximum number of reducers:
+2017-09-13 11:58:56,705 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) -   set hive.exec.reducers.max=<number>
+2017-09-13 11:58:56,705 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - In order to set a constant number of reducers:
+2017-09-13 11:58:56,705 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) -   set mapreduce.job.reduces=<number>
+2017-09-13 11:58:56,743 INFO  [HiveServer2-Background-Pool: Thread-175]: mr.ExecDriver (ExecDriver.java:execute(299)) - Using org.apache.hadoop.hive.ql.io.CombineHiveInputFormat
+2017-09-13 11:58:56,928 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_11-58-56_424_712399211034047981-2/-mr-10004/c660ae41-a24d-42b5-a3f7-3004b80a8b8e/map.xml]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:58:56,978 WARN  [DataStreamer for file /tmp/hive/cloudera/6c89e6b9-e886-4bdb-9d3f-2eec96f405d3/hive_2017-09-13_11-58-56_424_712399211034047981-2/-mr-10004/c660ae41-a24d-42b5-a3f7-3004b80a8b8e/reduce.xml]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:58:57,662 WARN  [HiveServer2-Background-Pool: Thread-175]: mapreduce.JobResourceUploader (JobResourceUploader.java:uploadFiles(64)) - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-09-13 11:58:57,693 WARN  [DataStreamer for file /tmp/hadoop-yarn/staging/cloudera/.staging/job_1505318087544_0002/libjars/hive-contrib.jar]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:58:58,432 WARN  [DataStreamer for file /tmp/hadoop-yarn/staging/cloudera/.staging/job_1505318087544_0002/job.split]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:58:58,448 WARN  [DataStreamer for file /tmp/hadoop-yarn/staging/cloudera/.staging/job_1505318087544_0002/job.splitmetainfo]: hdfs.DFSClient (DFSOutputStream.java:closeResponder(953)) - Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1281)
+	at java.lang.Thread.join(Thread.java:1355)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:951)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:689)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:878)
+2017-09-13 11:58:59,012 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - Starting Job = job_1505318087544_0002, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1505318087544_0002/
+2017-09-13 11:58:59,012 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1505318087544_0002
+2017-09-13 11:59:11,484 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2017-09-13 11:59:11,836 WARN  [HiveServer2-Background-Pool: Thread-175]: mapreduce.Counters (AbstractCounters.java:getGroup(234)) - Group org.apache.hadoop.mapred.Task$Counter is deprecated. Use org.apache.hadoop.mapreduce.TaskCounter instead
+2017-09-13 11:59:11,837 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - 2017-09-13 11:59:11,825 Stage-1 map = 0%,  reduce = 0%
+2017-09-13 11:59:23,413 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - 2017-09-13 11:59:23,413 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.22 sec
+2017-09-13 11:59:35,665 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - 2017-09-13 11:59:35,661 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.77 sec
+2017-09-13 11:59:36,739 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - MapReduce Total cumulative CPU time: 2 seconds 770 msec
+2017-09-13 11:59:36,809 INFO  [HiveServer2-Background-Pool: Thread-175]: exec.Task (SessionState.java:printInfo(988)) - Ended Job = job_1505318087544_0002
+2017-09-13 11:59:36,831 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - MapReduce Jobs Launched: 
+2017-09-13 11:59:36,832 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 2.77 sec   HDFS Read: 6851 HDFS Write: 2 SUCCESS
+2017-09-13 11:59:36,832 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - Total MapReduce CPU Time Spent: 2 seconds 770 msec
+2017-09-13 11:59:36,832 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913115858_7613877a-0311-4559-820c-ad97dfec23b8); Time taken: 40.205 seconds
+2017-09-13 11:59:36,832 INFO  [HiveServer2-Background-Pool: Thread-175]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-13 12:25:55,567 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170913122525_84f772dd-b9bf-4cb6-8fb0-3823c7b87bfe): DESCRIBE DATABASE EXTENDED `hiveoriginal_sc`
+2017-09-13 12:25:55,574 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-13 12:25:55,574 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:db_name, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer), FieldSchema(name:location, type:string, comment:from deserializer), FieldSchema(name:owner_name, type:string, comment:from deserializer), FieldSchema(name:owner_type, type:string, comment:from deserializer), FieldSchema(name:parameters, type:string, comment:from deserializer)], properties:null)
+2017-09-13 12:25:55,576 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170913122525_84f772dd-b9bf-4cb6-8fb0-3823c7b87bfe); Time taken: 0.008 seconds
+2017-09-13 12:25:55,583 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-13 12:25:55,583 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170913122525_84f772dd-b9bf-4cb6-8fb0-3823c7b87bfe): DESCRIBE DATABASE EXTENDED `hiveoriginal_sc`
+2017-09-13 12:25:55,583 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-13 12:25:55,608 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170913122525_84f772dd-b9bf-4cb6-8fb0-3823c7b87bfe); Time taken: 0.025 seconds
+2017-09-13 12:25:55,609 INFO  [HiveServer2-Handler-Pool: Thread-198]: ql.Driver (SessionState.java:printInfo(988)) - OK

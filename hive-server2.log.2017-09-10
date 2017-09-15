@@ -1,0 +1,20 @@
+2017-09-10 13:01:03,513 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170910130101_ee0973fd-728e-459e-9d4a-3ac15c4fdc86): DESCRIBE FORMATTED `default`.`emp`
+2017-09-10 13:01:03,590 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-10 13:01:03,625 ERROR [HiveServer2-Handler-Pool: Thread-30]: metadata.Hive (Hive.java:getTable(1182)) - Table default not found: default.default table not found
+2017-09-10 13:01:03,727 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-10 13:01:03,727 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:col_name, type:string, comment:from deserializer), FieldSchema(name:data_type, type:string, comment:from deserializer), FieldSchema(name:comment, type:string, comment:from deserializer)], properties:null)
+2017-09-10 13:01:03,729 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170910130101_ee0973fd-728e-459e-9d4a-3ac15c4fdc86); Time taken: 0.216 seconds
+2017-09-10 13:01:03,735 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-10 13:01:03,735 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170910130101_ee0973fd-728e-459e-9d4a-3ac15c4fdc86): DESCRIBE FORMATTED `default`.`emp`
+2017-09-10 13:01:03,753 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:launchTask(1974)) - Starting task [Stage-0:DDL] in serial mode
+2017-09-10 13:01:03,784 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170910130101_ee0973fd-728e-459e-9d4a-3ac15c4fdc86); Time taken: 0.049 seconds
+2017-09-10 13:01:03,786 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (SessionState.java:printInfo(988)) - OK
+2017-09-10 13:01:03,856 WARN  [HiveServer2-Handler-Pool: Thread-30]: lazy.LazyStruct (LazyStruct.java:parse(151)) - Extra bytes detected at the end of the row! Ignoring similar problems.
+2017-09-10 13:05:37,546 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(445)) - Compiling command(queryId=hive_20170910130505_8f86fa36-b6f5-42f9-9a6e-d69ce97699fe): SELECT 'Hello World!'
+2017-09-10 13:05:37,602 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(502)) - Semantic Analysis Completed
+2017-09-10 13:05:37,602 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:getSchema(268)) - Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:string, comment:null)], properties:null)
+2017-09-10 13:05:37,603 INFO  [HiveServer2-Handler-Pool: Thread-30]: ql.Driver (Driver.java:compile(609)) - Completed compiling command(queryId=hive_20170910130505_8f86fa36-b6f5-42f9-9a6e-d69ce97699fe); Time taken: 0.057 seconds
+2017-09-10 13:05:37,618 INFO  [HiveServer2-Background-Pool: Thread-50]: ql.Driver (Driver.java:checkConcurrency(188)) - Concurrency mode is disabled, not creating a lock manager
+2017-09-10 13:05:37,619 INFO  [HiveServer2-Background-Pool: Thread-50]: ql.Driver (Driver.java:execute(1600)) - Executing command(queryId=hive_20170910130505_8f86fa36-b6f5-42f9-9a6e-d69ce97699fe): SELECT 'Hello World!'
+2017-09-10 13:05:37,633 INFO  [HiveServer2-Background-Pool: Thread-50]: ql.Driver (Driver.java:execute(1883)) - Completed executing command(queryId=hive_20170910130505_8f86fa36-b6f5-42f9-9a6e-d69ce97699fe); Time taken: 0.001 seconds
+2017-09-10 13:05:37,633 INFO  [HiveServer2-Background-Pool: Thread-50]: ql.Driver (SessionState.java:printInfo(988)) - OK

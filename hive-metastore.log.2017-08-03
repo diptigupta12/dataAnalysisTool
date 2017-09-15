@@ -1,0 +1,2 @@
+2017-08-03 12:30:35,325 ERROR [main]: metastore.ObjectStore (ObjectStore.java:checkSchema(7180)) - Version information found in metastore differs 0.13.0 from expected schema version 1.1.0. Schema verififcation is disabled hive.metastore.schema.verification so setting version.
+2017-08-03 12:30:35,438 WARN  [main]: metastore.ObjectStore (ObjectStore.java:getDatabase(621)) - Failed to get database default, returning NoSuchObjectException

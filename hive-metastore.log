@@ -1,0 +1,8 @@
+2017-09-13 09:03:22,192 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(338)) - Updating partition stats fast for: web_logs
+2017-09-13 09:03:22,215 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(341)) - Updated size to 115714
+2017-09-13 09:03:22,469 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(338)) - Updating partition stats fast for: web_logs
+2017-09-13 09:03:22,471 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(341)) - Updated size to 108123
+2017-09-13 09:03:22,668 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(338)) - Updating partition stats fast for: web_logs
+2017-09-13 09:03:22,671 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(341)) - Updated size to 84667
+2017-09-13 09:03:22,866 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(338)) - Updating partition stats fast for: web_logs
+2017-09-13 09:03:22,868 WARN  [pool-3-thread-12]: hive.log (MetaStoreUtils.java:updatePartitionStatsFast(341)) - Updated size to 105653
